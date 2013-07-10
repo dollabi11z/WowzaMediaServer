@@ -25,7 +25,7 @@ do
 
 # log interceptor com.wowza.wms.logging.LogNotify - see Javadocs for ILogNotify
 
-$_EXECJAVA $JAVA_OPTS $JMXOPTIONS -Dcom.wowza.wms.runmode="service" -Dcom.wowza.wms.native.base="linux" -Dcom.wowza.wms.AppHome="$WMSAPP_HOME" -Dcom.wowza.wms.ConfigURL="$WMSCONFIG_URL" -Dcom.wowza.wms.ConfigHome="$WMSCONFIG_HOME" -cp $WMSAPP_HOME/bin/wms-bootstrap.jar com.wowza.wms.bootstrap.Bootstrap $WMSCOMMAND > /dev/null 2>&1 &
+sudo -u wowza $_EXECJAVA $JAVA_OPTS $JMXOPTIONS -Dcom.wowza.wms.runmode="service" -Dcom.wowza.wms.native.base="linux" -Dcom.wowza.wms.AppHome="$WMSAPP_HOME" -Dcom.wowza.wms.ConfigURL="$WMSCONFIG_URL" -Dcom.wowza.wms.ConfigHome="$WMSCONFIG_HOME" -cp $WMSAPP_HOME/bin/wms-bootstrap.jar com.wowza.wms.bootstrap.Bootstrap $WMSCOMMAND > /dev/null 2>&1 &
 
 rc=$?
 

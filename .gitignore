@@ -10,3 +10,4 @@ examples
 lib
 lib-native
 .bash_history
+conf/Server.license

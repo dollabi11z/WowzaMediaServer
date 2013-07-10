@@ -29,7 +29,7 @@ while [ $rc -eq 144 ]
 do
 
 # log interceptor com.wowza.wms.logging.LogNotify - see Javadocs for ILogNotify
-$_EXECJAVA $JAVA_OPTS $JMXOPTIONS -Dcom.wowza.wms.runmode="$mode" -Dcom.wowza.wms.native.base="linux" -Dcom.wowza.wms.AppHome="$WMSAPP_HOME" -Dcom.wowza.wms.ConfigURL="$WMSCONFIG_URL" -Dcom.wowza.wms.ConfigHome="$WMSCONFIG_HOME" -cp $WMSAPP_HOME/bin/wms-bootstrap.jar com.wowza.wms.bootstrap.Bootstrap start
+sudo -u wowza $_EXECJAVA $JAVA_OPTS $JMXOPTIONS -Dcom.wowza.wms.runmode="$mode" -Dcom.wowza.wms.native.base="linux" -Dcom.wowza.wms.AppHome="$WMSAPP_HOME" -Dcom.wowza.wms.ConfigURL="$WMSCONFIG_URL" -Dcom.wowza.wms.ConfigHome="$WMSCONFIG_HOME" -cp $WMSAPP_HOME/bin/wms-bootstrap.jar com.wowza.wms.bootstrap.Bootstrap start
 
 rc=$?
 done
