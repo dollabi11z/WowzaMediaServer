@@ -25,10 +25,10 @@
 		-->
 		<Streams>
 			<StreamType>default</StreamType>
-			<StorageDir>${com.wowza.wms.context.VHostConfigHome}/content</StorageDir>
+			<StorageDir>/N/vault/archive/prod/bag</StorageDir>
 			<KeyDir>${com.wowza.wms.context.VHostConfigHome}/keys</KeyDir>
-			<!-- LiveStreamPacketizers (separate with commas): cupertinostreamingpacketizer, smoothstreamingpacketizer, sanjosestreamingpacketizer, mpegdashstreamingpacketizer, cupertinostreamingrepeater, smoothstreamingrepeater, sanjosestreamingrepeater, dvrstreamingpacketizer, dvrstreamingrepeater -->
-			<LiveStreamPacketizers></LiveStreamPacketizers>
+			<!-- LiveStreamPacketizers (separate with commas): cupertinostreamingpacketizer, smoothstreamingpacketizer, sanjosestreamingpacketizer, mpegdashstreamingpacketizer, cupertinostreamingrepeater, smoothstreamingrepeater, sanjosestreamingrepeater -->
+			<LiveStreamPacketizers></LiveStreamPacketizers>			
 			<!-- Properties defined here will override any properties defined in conf/Streams.xml for any streams types loaded by this application -->
 			<Properties>
 			</Properties>
@@ -109,9 +109,9 @@
 			<IdleFrequency>75</IdleFrequency>
 			<RTSPSessionTimeout>90000</RTSPSessionTimeout>
 			<RTSPMaximumPendingWriteBytes>0</RTSPMaximumPendingWriteBytes>
-			<RTSPBindIpAddress></RTSPBindIpAddress>
-			<RTSPConnectionIpAddress>0.0.0.0</RTSPConnectionIpAddress>
-			<RTSPOriginIpAddress>127.0.0.1</RTSPOriginIpAddress>
+			<RTSPBindIpAddress>192.168.251.51</RTSPBindIpAddress>
+			<RTSPConnectionIpAddress>192.168.251.51</RTSPConnectionIpAddress>
+			<RTSPOriginIpAddress>192.168.251.51</RTSPOriginIpAddress>
 			<IncomingDatagramPortRanges>*</IncomingDatagramPortRanges>
 			<!-- Properties defined here will override any properties defined in conf/RTP.xml for any depacketizers loaded by this application -->
 			<Properties>
@@ -157,6 +157,11 @@
 				<Name>base</Name>
 				<Description>Base</Description>
 				<Class>com.wowza.wms.module.ModuleCore</Class>
+			</Module>
+			<Module>
+				<Name>properties</Name>
+				<Description>Properties</Description>
+				<Class>com.wowza.wms.module.ModuleProperties</Class>
 			</Module>
 			<Module>
 				<Name>logging</Name>
