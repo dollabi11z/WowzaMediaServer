@@ -1,0 +1,14 @@
+#!/bin/bash
+function clean_up
+{
+        cd /usr/local/WowzaMediaServer/bin
+        ./shutdown.sh
+        exit 0
+}
+
+trap clean_up HUP INT QUIT ABRT KILL ALRM TERM TSTP SIGHUP SIGINT SIGTERM
+
+/usr/local/WowzaMediaServer/bin/startup.sh service 2>&1 &
+
+wait $!
+exit 0
