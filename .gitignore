@@ -13,3 +13,7 @@ lib-native
 conf/Server.license
 .ssh
 .gitconfig
+bin
+.DS_Store
+conf/Admin.guid
+conf/Server.guid
