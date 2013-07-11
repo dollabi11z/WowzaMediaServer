@@ -10,12 +10,7 @@
     -->
     <Connections>
       <AutoAccept>true</AutoAccept>
-      <AllowDomains>
-        127.0.0.1
-        192.168.250.*
-        192.168.251.*
-        192.168.252.*
-      </AllowDomains>
+      <AllowDomains>localhost, *.rockhall.org</AllowDomains>
     </Connections>
     <!--
       StorageDir path variables
