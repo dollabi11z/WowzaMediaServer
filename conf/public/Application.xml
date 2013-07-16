@@ -168,11 +168,17 @@
         <Description>FLVPlayback</Description>
         <Class>com.wowza.wms.module.ModuleFLVPlayback</Class>
       </Module>
+      <!-- Order is important here! -->
       <Module>
-        <Name>WhiteList</Name>
+        <Name>AllowWhiteList</Name>
         <Description>Streams only pids in a given list</Description>
-        <Class>com.rockhall.wms.module.WhiteList</Class>
+        <Class>com.rockhall.wms.module.AllowWhiteList</Class>
       </Module> 
+      <Module>
+        <Name>AllowLocalNetwork</Name>
+        <Description>Streams only pids in a given list</Description>
+        <Class>com.rockhall.wms.module.AllowLocalNetwork</Class>
+      </Module>
     </Modules>
     <!-- Properties defined here will be added to the IApplication.getProperties() and IApplicationInstance.getProperties() collections -->
     <Properties>

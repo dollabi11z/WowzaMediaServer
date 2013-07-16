@@ -17,3 +17,4 @@ bin
 .DS_Store
 conf/Admin.guid
 conf/Server.guid
+conf/Server.lstore
