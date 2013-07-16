@@ -170,15 +170,10 @@
       </Module>
       <!-- Order is important here! -->
       <Module>
-        <Name>AllowLocalNetwork</Name>
-        <Description>Streams only pids in a given list</Description>
-        <Class>com.rockhall.wms.module.AllowLocalNetwork</Class>
+        <Name>WhiteList</Name>
+        <Description>Streams only pids in a given list or from local network</Description>
+        <Class>com.rockhall.wms.module.WhiteList</Class>
       </Module>
-      <Module>
-        <Name>AllowWhiteList</Name>
-        <Description>Streams only pids in a given list</Description>
-        <Class>com.rockhall.wms.module.AllowWhiteList</Class>
-      </Module> 
     </Modules>
     <!-- Properties defined here will be added to the IApplication.getProperties() and IApplicationInstance.getProperties() collections -->
     <Properties>
