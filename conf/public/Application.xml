@@ -170,16 +170,16 @@
       </Module>
       <!-- Order is important here! -->
       <Module>
-        <Name>WhiteList</Name>
-        <Description>Streams only pids in a given list or from local network</Description>
-        <Class>com.rockhall.wms.module.WhiteList</Class>
+        <Name>RestrictAccess</Name>
+        <Description>Restricts access to videos either by network, solr query, or a give list of allowed video pids</Description>
+        <Class>com.rockhall.wms.module.RestrictAccess</Class>
       </Module>
     </Modules>
     <!-- Properties defined here will be added to the IApplication.getProperties() and IApplicationInstance.getProperties() collections -->
     <Properties>
       <Property>
         <Name>SolrURL</Name>
-        <Value>http://127.0.0.1:8985/solr</Value>
+        <Value>http://solr.rockhall.org:8985/solr/hydra-prod</Value>
       </Property>
       <Property>
         <Name>WhiteList</Name>
